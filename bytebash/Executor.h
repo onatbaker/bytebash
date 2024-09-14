@@ -31,7 +31,11 @@ void pwdCommand(const std::string&)
 
 void helpCommand(const std::string&)
 {
-	std::cout << "Haven't really gotten around to implementing a help page. You can refer to the man pages if you're using *nix though" << std::endl;
+	std::cout << "cd - changes directory" << std::endl;
+	std::cout << "ls - lists all the files in directory" << std::endl;
+	std::cout << "pwd - prints current working director" << std::endl;
+	std::cout << "clear - clears the terminal screen" << std::endl;
+	std::cout << "exit - exits the shell" << std::endl;
 }
 
 void clearCommand(const std::string&)
@@ -39,7 +43,7 @@ void clearCommand(const std::string&)
 	system("cls");
 }
 
-std::unordered_map<std::string, void(*)(const std::string&)> commandMap = // Only fool would try to implement a thousand (or five) commands using if statements
+std::unordered_map<std::string, void(*)(const std::string&)> commandMap = // Only a fool would try to implement a thousand (or five) commands using if statements
 {
 	{"cd", cdCommand},
 	{"ls", lsCommand},
